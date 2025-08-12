@@ -4,6 +4,8 @@ import "dotenv/config"
 import connectDB from "./config/mongodb.js"
 import connectCloudinary from "./config/cloudinary.js"
 import adminRouter from "./routes/admin.route.js"
+import doctorRouter from "./routes/doctor.route.js"
+import userRouter from "./routes/user.route.js"
 
 
 //   APP CONFIG 
@@ -21,11 +23,13 @@ app.use(cors())
 
 
 
-
+                                                        
                                
 
 //  API END POINT
 app.use('/api/admin' ,adminRouter)
+app.use('/api/doctor' , doctorRouter)
+app.use("/api/user" , userRouter)
 //   localhost:4000/api/admin/add-doctor
 
 
